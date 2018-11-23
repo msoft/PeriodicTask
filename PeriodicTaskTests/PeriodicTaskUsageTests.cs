@@ -8,7 +8,7 @@ namespace PeriodicTaskTests
     public class PeriodicTaskUsageTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void When_Executing_PeriodicTask_Then_DomainCode_Shall_Be_Executed()
         {
             var loggerMock = new Mock<ILogger>();
 

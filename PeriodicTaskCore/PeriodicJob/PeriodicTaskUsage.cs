@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using NLog;
 
-namespace PeriodicTaskCore
+namespace PeriodicTaskCore.PeriodicJob
 {
     public class PeriodicTaskUsage : PeriodicTask
     {
@@ -11,7 +11,7 @@ namespace PeriodicTaskCore
         base(logger, periodicity)
         {
             // Lancement de la tâche périodique
-           this.CreateAndLaunchTimer(); 
+           this.LaunchJob(); 
         }
 
         protected override void ExecutePeriodicTask(CancellationToken cancellationToken)

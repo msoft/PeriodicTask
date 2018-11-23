@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using PeriodicTaskCore;
+using PeriodicTaskCore.PeriodicJob;
 using NLog;
 
 namespace PeriodicTaskTests
@@ -15,7 +15,7 @@ namespace PeriodicTaskTests
 
         public async Task ExecuteIteration()
         {
-            this.CreateAndLaunchTimer();
+            this.LaunchJob();
 
             await this.Timer;
         }

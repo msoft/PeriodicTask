@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using NLog;
 
-namespace PeriodicTaskCore
+namespace PeriodicTaskCore.PeriodicJob
 {
 	public abstract class PeriodicTask : IDisposable
 	{
@@ -75,7 +75,7 @@ namespace PeriodicTaskCore
 
 		}
 
-		protected void CreateAndLaunchTimer()
+		protected void LaunchJob()
 		{
 			var cancellationToken = this.cancellationTokenSource.Token;
 
